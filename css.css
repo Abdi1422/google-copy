@@ -1,0 +1,207 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+:root{
+    --grey:#ececec;
+}
+.header{
+    margin-top: 20px;
+}
+.headercontainer{
+    margin-left: auto;
+    width: 14.2rem;
+    display: flex;
+    gap: 1.2rem;
+    align-content: center;
+}
+.a{
+    color: black;
+    text-decoration: none;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+}
+.a:hover{
+    text-decoration: underline;
+}
+.btn{
+    width: 2.3rem;
+    height: 2.3rem;
+    border-radius: 10rem;
+    border: 0px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn:hover{
+    background-color: var(--grey);
+}
+.main{
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+    gap: 3rem;
+}
+.shortcutdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    width: 110px;
+    height: 110px;
+    position: relative;
+    bottom: 30px;
+}
+.shortcutdiv:hover{
+    background-color: var(--grey);
+}
+.google{
+    font-size: 100px;
+    font-weight: 500;
+}
+.blue{
+    color: rgba(26, 115, 232, 1);
+}
+.red{
+    color: #DB4437;
+}
+.yellow{
+    color:#F4B400 ;
+}
+.green{
+    color: #0F9D58;
+}
+.input{
+    width: 30rem;
+    height: 40px;
+    border-radius: 100px;
+    outline: none;
+    padding: 0px 13px;
+    border: 0px;
+}
+.dotsicon{
+    color: grey;
+    font-size: 20px;
+}
+.searchboxdiv{
+    box-shadow: 0 0 5px grey;
+    border-radius: 100px;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center; 
+}
+.pencil{
+    color: rgba(26, 115, 232, 1);
+    font-size: 20px;
+    font-weight: 900;
+    margin-right: 5px;
+}
+.bottombtn{
+    background-color: white;
+    color: rgba(26, 115, 232, 1);
+    border: 1px ;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 16%); 
+    border-radius: 100px;
+    width: 170px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 94.5%;
+    left: 90.5%;
+    cursor: pointer;
+}
+.bottombtn:hover{
+    background-color: var(--grey);
+}
+.searchicon{
+    font-weight: 800;
+    font-size: 20px;
+}
+.micicon{
+    font-size: 20px;
+}
+input::placeholder {
+    font-size: 15px;
+    font-weight: 400;
+    color: black;
+}
+.shortcutbtn{
+    height: 48px;
+    width: 48px;
+    background-color:rgba(241, 243, 244,1);
+    border: 0px;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.add{
+    font-size: 30px;
+    position: relative;
+    bottom: 3px;
+}
+.p{
+    font-size: 13px;
+}
+.inputpopup{
+    background-color: white;
+    height: 100px;
+    width: 561px;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0px 5px grey;
+}
+.addshortcut{
+    background-color: white;
+    height: 270px;
+    width: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0px 5px grey;
+    border-radius: 10px;
+}
+.custompage{
+    background-color: black;
+    height: 270px;
+    width: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0px 5px grey;
+    border-radius: 10px;
+}
+.whiteline{
+    height: 15px;
+    width: 561px;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    z-index: 1;
+}
+input:focus::placeholder {
+    color: transparent;
+}
+.shortcutbackground{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
