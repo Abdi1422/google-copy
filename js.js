@@ -1,15 +1,25 @@
 const body = document.querySelector(".body")
 const input = document.querySelector(".input");
 
+let inputbackground = document.createElement("div")
 let whiteline=document.createElement("div")
 let searchboxdiv = document.querySelector(".searchboxdiv")
 let inputpopup= document.createElement("div")
-input.addEventListener("click",function(){  
+input.addEventListener("click",function(){
+    body.append(inputbackground)
+    inputbackground.setAttribute("class","inputbackground")  
     body.append(inputpopup)
     inputpopup.setAttribute("class","inputpopup")
     searchboxdiv.style.borderRadius = "0px"; 
     body.append(whiteline)
     whiteline.setAttribute("class","whiteline")  
+})
+inputbackground.addEventListener("click",function(){
+    inputpopup.remove()
+    inputbackground.remove()
+    searchboxdiv.style.borderRadius="100px"
+    whiteline.remove()
+    
 })
 
 let urlp =document.createElement("p")
@@ -42,14 +52,14 @@ shortcutdiv.addEventListener("click",function(){
     namep.setAttribute("class","ps ")
     namep.innerText="Name"
     namediv.append(nameinput)
-    nameinput.setAttribute("class","inputs")
+    nameinput.setAttribute("class","inputs nameinput")
     shortcutwrapper.append(urldiv) 
     urldiv.setAttribute("class","urldiv")
     urldiv.append(urlp)
     urlp.setAttribute("class","ps")
     urlp.innerText="URL"
     urldiv.append(urlinput)
-    urlinput.setAttribute("class","inputs")
+    urlinput.setAttribute("class","inputs urlinput")
     addshortcut.append(donebtndiv)
     donebtndiv.setAttribute("class","donebtndiv")
     donebtndiv.append(cancelbtn)
@@ -101,15 +111,17 @@ bottombtn.addEventListener("click",function(){
     navupload.append(customnav)
     customnav.setAttribute("class","customnav")
     customnav.append(navbtn1)
-    navbtn1.setAttribute("class","navbtn ")
+    navbtn1.setAttribute("class","navbtn navbtn1 ")
     navbtn1.append(imageicon)
     imageicon.setAttribute("name","image-outline")
-    navbtn1.append("navbtn1p")
+    imageicon.setAttribute("class","imageicon")
+    navbtn1.append(navbtn1p)
     navbtn1p.innerText="Background"
     customnav.append(navbtn2)
     navbtn2.setAttribute("class","navbtn navbtn2")
     navbtn2.append(shortsicon)
     shortsicon.setAttribute("name","attach")
+    shortsicon.setAttribute("class","shortsicon")
     navbtn2.append(navbtn2p)
     navbtn2p.innerText="Shortcuts"
     customnav.append(navbtn3)
@@ -127,7 +139,6 @@ bottombtn.addEventListener("click",function(){
     uploadicon.setAttribute("class","uploadicon")
     upload.append(uploadp)
     uploadp.innerText="Upload from device"
-    
     custompage.append(custombtndiv)
     custombtndiv.setAttribute("class","custombtndiv")
     custombtndiv.append(customdelete)
@@ -145,21 +156,10 @@ customdelete.addEventListener("click",function(){
 
 let ps = document.querySelectorAll(".ps")
 let inputs = document.querySelectorAll(".inputs")
-ps.forEach(p=>{
+inputs.forEach(p=>{
     p.addEventListener("click",function(){
-        ps.forEach(p1 => p1.classlist.remove("active"))
+        inputs.forEach(p1 => p1.classlist.remove("active"))
         this.classlist.add("active") 
     })
 })
-donebtn.disabled = true;
-
-urlinput.addEventListener("keyups",(e)=>{
-    let value = e.currentTarget.value;
-    if (value===""){
-        donebtn.disabled=true;
-    }else{
-        donebtn.disabled=false;
-    }
-})
-
 
